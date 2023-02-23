@@ -20,7 +20,7 @@ int main()
 
 		stkn = strtok(str, " \n");
 
-		arr[1024] = {stkn, NULL};
+		/* arr[1024] = {stkn, NULL};*/
 
 		mypid = fork();
 		if (mypid == -1)
