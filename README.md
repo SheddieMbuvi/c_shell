@@ -1,1 +1,2 @@
-# Shell Project B
+# Simple Shell
+Simple Shell.., In C language
