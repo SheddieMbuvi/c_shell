@@ -1,1 +1,2 @@
-#Simple Shell.., In C language
+# Simple Shell
+Simple Shell.., In C language
