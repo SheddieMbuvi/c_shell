@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		getline(&str, &n, stdin);
 
 		stkn = strtok(str, " \n");
-	
+
 
 		/*arr[1024] = {stkn, NULL};*/
 		arr[0] = stkn;
@@ -32,7 +32,8 @@ int main(int argc, char **argv)
 		}
 		else if (mypid == 0)/*solves the issue of exiting*/
 		{
-			if (execve(arr[0], arr, NULL) == -1)
+			if (execve(arr[0], arr, NULL) == -1 && arr[0] != NULL)
+
 			{
 				perror(argv[0]);
 				return (1);
