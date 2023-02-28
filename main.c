@@ -28,12 +28,12 @@ int main(int argc, char **argv)
 		exit(0);
 
 		mypid = fork();
-		if (mypid == -1)
+		if (mypid == -1)/*returns -1 if the fork system call is unsuccesful*/
 		{
 			perror("Error");
 			return (1);
 		}
-		else if (mypid == 0)/*solves the issue of exiting*/
+		else if (mypid == 0)/*executed in the child process*/
 		{
 			if (execve(arr[0], arr, NULL) == -1 && arr[0] != NULL)
 
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 				return (1);
 			}
 		}
-		else
+		else/*executed in the parent process*/
 		{
 			wait(NULL);
 
