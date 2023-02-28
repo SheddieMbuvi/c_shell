@@ -23,11 +23,8 @@ int main(int argc, char **argv)
 		/*arr[1024] = {stkn, NULL};*/
 		arr[0] = stkn;
 
-		/*
-		 * compares the two strings, if return value = 0,
-		 * the strings are equal
-		 */
-		if (strcmp(stkn,"exit") == 0)
+		/*compares two strings, returns 0 if the strings are equal*/
+		if (strcmp(stkn, "exit") == 0)
 		exit(0);
 
 		mypid = fork();
